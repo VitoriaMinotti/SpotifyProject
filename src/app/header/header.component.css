@@ -1,0 +1,73 @@
+header {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #8b5cf6;
+  border-radius: 50%;
+}
+
+.logo svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #dcb5f4, #bb46c2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.searchBarContainer {
+  position: relative;
+}
+
+.searchBar {
+  border: 2px solid #ccc;
+  padding: 10px 35px 10px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 250px;
+  background-color: rgba(23, 18, 33, 0.9);
+  color: white;
+}
+
+.searchIconButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchIconButton svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}

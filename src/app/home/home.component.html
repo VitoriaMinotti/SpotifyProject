@@ -1,0 +1,28 @@
+<div class="artist-list">
+    <h2>TOP ARTISTAS</h2>
+    <div class="artist-card" *ngFor="let artist of artists">
+        <div class="artist-info">
+            <div class="artist-avatar"
+                [style.backgroundImage]="'url(' + (artist.images[0].url || 'https://via.placeholder.com/50') + ')'">
+            </div>
+            <div class="artist-details">
+                <div class="artist-name">{{ artist.name }}</div>
+                <div class="artist-meta">
+                    {{ artist.followers.total | number }} seguidores •
+                    {{ artist.genres[0] || 'Gênero desconhecido' }}
+                </div>
+            </div>
+        </div>
+        <div class="view-button" (click)="artistDetails(artist)">Ver mais</div>
+    </div>
+</div>
+
+<div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+
+    <div class="page-indicator">
+        Página {{ currentPage }} de {{ pageCount }}
+    </div>
+
+    <button (click)="nextPage()" [disabled]="currentPage === pageCount">Próxima</button>
+</div>

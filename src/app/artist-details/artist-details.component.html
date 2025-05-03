@@ -1,0 +1,46 @@
+<div class="artist-page">
+    <div class="banner" *ngIf="artist" [style.backgroundImage]="'url(' + artist.images[0].url + ')'">
+        <div class="overlay"></div>
+        <img [src]="artist.images[0].url" alt="{{ artist.name }}" class="artist-photo" />
+
+        <div class="artist-info">
+            <h1>{{ artist.name }}</h1>
+            <p>
+                <span class="followers">Número de seguidores: {{artist.followers.total | number }}</span>
+            </p>
+            <div class="genres">
+                <span class="genre" *ngFor="let genre of artist.genres.slice(0, 2)">{{ genre }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="album-list">
+        <h2>ÁLBUNS</h2>
+        <div class="album-card" *ngFor="let album of albums">
+            <div class="album-info">
+                <div class="album-cover"
+                    [style.backgroundImage]="'url(' + (album.images[0].url || 'https://via.placeholder.com/50') + ')'">
+                </div>
+                <div class="album-details">
+                    <div class="album-name">{{ album.name }}</div>
+                    <div class="album-meta">
+                        Total de faixas: {{ album.total_tracks }}
+                    </div>
+                </div>
+            </div>
+            <div class="view-button" (click)="albumDetails(artist)">Ver</div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+
+        <div class="page-indicator">
+            Página {{ currentPage }} de {{ pageCount }}
+        </div>
+
+        <button (click)="nextPage()" [disabled]="currentPage === pageCount">Próxima</button>
+    </div>
+
+
+</div>

@@ -1,0 +1,32 @@
+<main>
+    <div *ngIf="artist">
+        <div class="result">
+            <h1>Resultado para: </h1>
+            <h1 class="name">{{artist.name}}</h1>
+        </div>
+
+        <div class="cards" (click)="artistDetails(artist)">
+            <div class="card-item">
+                <img [src]="artist.images[0]?.url" alt="{{ artist.name }}" class="artist-img" />
+                <h2 class="artist-name">{{ artist.name }}</h2>
+
+                <div class="genres">
+                    <span class="genre" *ngFor="let genre of artist.genres.slice(0, 2)">{{ genre }}</span>
+                </div>
+
+                <p class="followers">Seguidores: {{ artist.followers.total | number }}</p>
+
+                <div class="popularity">
+                    <span>Popularidade</span>
+                    <div class="popularity-bar">
+                        <div class="popularity-fill" [style.width.%]="artist.popularity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="notFound">
+        <p class="notFound">Artista não encontrado 😕</p>
+    </div>
+</main>

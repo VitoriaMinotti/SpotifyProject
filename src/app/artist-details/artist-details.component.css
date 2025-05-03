@@ -1,0 +1,170 @@
+.artist-page {
+  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 11, 22, 0.7);
+}
+
+.artist-photo {
+  position: relative;
+  z-index: 1;
+  width: 10vw;
+  max-width: 120px;
+  height: 10vw;
+  max-height: 120px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 3px solid #fff;
+}
+
+.artist-info {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.artist-info h1 {
+  font-size: 5vw;
+  margin: 0;
+}
+
+p {
+  margin: 0.7rem;
+}
+
+.genre {
+  background-color: #3b2a50;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 1vw;
+  white-space: nowrap;
+}
+
+.genres span {
+  background-color: #3b2a50;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 1vw;
+}
+.album-list {
+  width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: white;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.album-card {
+  background-color: #1c153375;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.album-card:hover {
+  background-color: #2a1e4d;
+}
+
+.album-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.album-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+}
+
+.album-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-name {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.album-meta {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.view-button {
+  background-color: #8b5cf6;
+  padding: 0.6rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #492c8d;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1c1533;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #8b5cf6;
+}
+
+.pagination button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.pagination .page-indicator {
+  color: white;
+}

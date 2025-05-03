@@ -1,0 +1,25 @@
+<div class="album-page" *ngIf="album">
+    <div class="album-banner"
+        [style.backgroundImage]="'url(' + (album.images[0].url || 'https://via.placeholder.com/300') + ')'">
+        <div class="overlay"></div>
+        <img [src]="album.images[0].url || 'https://via.placeholder.com/300'" alt="{{ album.name }}"
+            class="album-photo" />
+    </div>
+
+    <div class="album-info">
+        <h1>{{ album.name }}</h1>
+        <p><strong>Artista:</strong> {{ album.artists[0].name }}</p>
+        <p><strong>Ano de Lançamento:</strong> {{ album.release_date | date:'yyyy' }}</p>
+        <p><strong>Total de faixas:</strong> {{ album.total_tracks }}</p>
+    </div>
+
+    <div class="track-list">
+        <h3>Faixas:</h3>
+        <ul>
+            <li *ngFor="let track of album.tracks.items">
+                <!-- <span class="track-name">{{ track.name }}</span> -->
+                <span class="track-duration">{{ track.duration_ms | number: '1.0-0' }} ms</span>
+            </li>
+        </ul>
+    </div>
+</div>
