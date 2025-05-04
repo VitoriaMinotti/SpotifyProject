@@ -21,31 +21,31 @@ Antes de começar, verifique se você tem os seguintes pré-requisitos instalado
 
 2. **Instale as dependências**:
 
-Após clonar o repositório, instale as dependências necessárias com o comando:
-  
-  npm install
+  Após clonar o repositório, instale as dependências necessárias com o comando:
+    
+    npm install
 
 3. **Configuração do Ambiente**:
-Adicione as variáveis de ambiente para a autenticação com o Spotify:
-
-  SPOTIFY_CLIENT_ID=seu-client-id
-  SPOTIFY_CLIENT_SECRET=seu-client-secret
-
-Substitua seu-client-id e seu-client-secret pelas credenciais obtidas no Spotify Developer Dashboard.
+  Adicione as variáveis de ambiente para a autenticação com o Spotify:
+  
+    SPOTIFY_CLIENT_ID=seu-client-id
+    SPOTIFY_CLIENT_SECRET=seu-client-secret
+  
+  Substitua seu-client-id e seu-client-secret pelas credenciais obtidas no Spotify Developer Dashboard.
 
 4. **Inicie o servidor de desenvolvimento**:
 
-No terminal, execute o comando abaixo para iniciar o servidor local:
-
-  ng serve --host 127.0.0.1
+  No terminal, execute o comando abaixo para iniciar o servidor local:
+  
+    ng serve --host 127.0.0.1
 
 5.**Acesse a aplicação**:
 
-Após o servidor ser iniciado, abra o navegador e acesse a aplicação através do seguinte link:
-
-  http://127.0.0.1:4200
-
-Efetue o login em sua conta spotifye esta pronto para uso.
+  Após o servidor ser iniciado, abra o navegador e acesse a aplicação através do seguinte link:
+  
+    http://127.0.0.1:4200
+  
+  Efetue o login em sua conta spotifye esta pronto para uso.
 
 ## Funcionalidades
   Busca de artistas: Procure por artistas utilizando o nome.
