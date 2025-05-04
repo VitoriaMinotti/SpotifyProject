@@ -75,11 +75,7 @@ export class ArtistDetailsComponent implements OnInit {
       .map((_, i) => i + 1);
   }
 
-  albumDetails(album: any) {
-    console.log(`VAIIIIII`)
-    this.router.navigate([this.detailRoute, album.id]);
-
-    console.log(this.detailRoute)
+  albumDetails(id: string) {
+    this.router.navigate(['/album-details', id]);
   }
-
 }

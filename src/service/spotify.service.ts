@@ -66,7 +66,7 @@ export class SpotifyService {
             .set('q', query)
             .set('type', 'artist')
 
-        return this.http.get<any>(Endpoints.endpoints.search(query, 0, 10), { params }).pipe(
+        return this.http.get<any>(Endpoints.endpoints.search(query), { params }).pipe(
             tap((response) => {
                 this._artists.next(response.artists);
             })

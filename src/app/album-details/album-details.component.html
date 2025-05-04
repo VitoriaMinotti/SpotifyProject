@@ -8,17 +8,19 @@
 
     <div class="album-info">
         <h1>{{ album.name }}</h1>
-        <p><strong>Artista:</strong> {{ album.artists[0].name }}</p>
-        <p><strong>Ano de Lançamento:</strong> {{ album.release_date | date:'yyyy' }}</p>
-        <p><strong>Total de faixas:</strong> {{ album.total_tracks }}</p>
+        <p><strong>Artista:</strong> {{ album.artists[0].name }} | Ano de Lançamento: {{ album.release_date | date:'yyyy' }} | Total de faixas: {{ album.total_tracks }}</p>
     </div>
 
     <div class="track-list">
         <h3>Faixas:</h3>
         <ul>
             <li *ngFor="let track of album.tracks.items">
-                <!-- <span class="track-name">{{ track.name }}</span> -->
-                <span class="track-duration">{{ track.duration_ms | number: '1.0-0' }} ms</span>
+                <span class="track-name">{{ track.track_number }}</span>
+                <span class="track-name">{{ track.name }}</span>
+                <span class="track-duration">
+                    {{ (track.duration_ms / 60000) | number:'1.0-0' }}:
+                    {{ ((track.duration_ms % 60000) / 1000) | number:'2.0-0' }} min
+                </span>
             </li>
         </ul>
     </div>

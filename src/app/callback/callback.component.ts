@@ -26,6 +26,5 @@ export class CallbackComponent {
 
       this.router.navigate(['']);
     }
-
   }
 }

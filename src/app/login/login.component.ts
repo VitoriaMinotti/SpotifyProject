@@ -8,17 +8,11 @@ import { AuthService } from 'src/auth/auth.service';
 })
 export class LoginComponent {
 
-
   constructor(
     private auth: AuthService
   ) { }
 
-  ngOnInit(): void {
-
-  }
-
   loginWithSpotify() {
     this.auth.redirectToAuthCodeFlow();
   }
-
 }

@@ -69,7 +69,7 @@ export interface AlbumDetails {
     spotify: string;
   };
   href: string;
-  id: string; // ID do álbum
+  id: string;
   images: Array<{
     url: string;
     height: number;
@@ -88,7 +88,7 @@ export interface AlbumDetails {
       spotify: string;
     };
     href: string;
-    id: string; // ID do artista
+    id: string;
     name: string;
     type: string;
     uri: string;
@@ -101,6 +101,7 @@ export interface AlbumDetails {
     previous: string;
     total: number;
     items: Array<{
+      name: string;
       artists: Array<{
         external_urls: {
           spotify: string;
@@ -141,8 +142,6 @@ export interface AlbumDetails {
   label: string;
   popularity: number;
 }
-
-
 
 export type ArtistPaginatedResponse = PaginatedResponse<Artist>;
 export type ArtistAlbumPaginatedResponse = PaginatedResponse<ArtistAlbum[]>;

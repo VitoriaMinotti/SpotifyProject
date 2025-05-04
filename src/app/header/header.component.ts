@@ -11,7 +11,6 @@ export class HeaderComponent {
   searchQuery: string = '';
 
   constructor(
-    private service: SpotifyService,
     private router: Router
   ) { }
 

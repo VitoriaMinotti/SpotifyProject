@@ -12,14 +12,14 @@ export class AuthGuard implements CanActivate {
         private auth: AuthService
     ) { }
 
+    // O método canActivate será chamado para cada tentativa de navegação para uma rota protegida
     canActivate() {
         if (this.auth.isLoggedIn()) {
             return true;
         }
 
-        this.auth.logout(); 
+        this.auth.logout();
         this.router.navigate(['/login']);
         return false;
     }
-
 }
